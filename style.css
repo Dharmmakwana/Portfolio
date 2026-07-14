@@ -1,0 +1,282 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    border:none;
+    outline:none;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
+}
+
+:root{
+    --bg-color:#000;
+    --second-bg:#111;
+    --text-color:#fff;
+    --main-color:#ff1e1e;
+}
+
+html{
+    font-size:62.5%;
+    overflow-x:hidden;
+}
+
+body{
+    background:var(--bg-color);
+    color:var(--text-color);
+}
+
+/* Header */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:2rem 9%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#000;
+    z-index:100;
+}
+
+.logo{
+    font-size:3rem;
+    color:var(--main-color);
+    font-weight:700;
+}
+
+nav a{
+    font-size:1.8rem;
+    color:white;
+    margin-left:4rem;
+    transition:.3s;
+}
+
+nav a:hover,
+nav a.active{
+    color:var(--main-color);
+}
+
+/* Sections */
+
+section{
+    min-height:100vh;
+    padding:10rem 9% 5rem;
+}
+
+/* Home */
+
+.home{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:6rem;
+}
+
+.home-img img{
+    width:35vw;
+    border-radius:50%;
+    border:6px solid var(--main-color);
+    box-shadow:0 0 40px var(--main-color);
+    transition:.5s;
+}
+
+.home-img img:hover{
+    transform:scale(1.05);
+}
+
+.home-content h1{
+    font-size:6rem;
+    font-weight:700;
+}
+
+.home-content h1 span{
+    color:var(--main-color);
+}
+
+.home-content h3{
+    font-size:3.5rem;
+    margin:1rem 0;
+}
+
+.home-content h3 span{
+    color:var(--main-color);
+}
+
+.home-content p{
+    font-size:1.7rem;
+    line-height:1.8;
+    margin:2rem 0;
+}
+
+/* Social Icons */
+
+.social-icons{
+    margin:3rem 0;
+}
+
+.social-icons a{
+    width:50px;
+    height:50px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    border:.2rem solid var(--main-color);
+    color:var(--main-color);
+    border-radius:50%;
+    margin-right:15px;
+    font-size:2rem;
+    transition:.4s;
+}
+
+.social-icons a:hover{
+    background:var(--main-color);
+    color:black;
+    transform:translateY(-8px);
+}
+
+/* Button */
+
+.btn{
+    display:inline-block;
+    padding:1rem 3rem;
+    border:2px solid var(--main-color);
+    color:var(--main-color);
+    font-size:1.8rem;
+    border-radius:40px;
+    transition:.4s;
+}
+
+.btn:hover{
+    background:var(--main-color);
+    color:black;
+    box-shadow:0 0 25px var(--main-color);
+}
+
+/* Heading */
+
+.heading{
+    text-align:center;
+    font-size:5rem;
+    color:var(--main-color);
+    margin-bottom:5rem;
+}
+
+/* Services */
+
+.box-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:2rem;
+}
+
+.box{
+    background:var(--second-bg);
+    padding:3rem;
+    border-radius:15px;
+    border:2px solid transparent;
+    transition:.4s;
+}
+
+.box:hover{
+    border-color:var(--main-color);
+    transform:translateY(-10px);
+}
+
+.box h3{
+    font-size:2.5rem;
+    margin-bottom:1rem;
+}
+
+.box p{
+    font-size:1.6rem;
+}
+
+/* Skills */
+
+.skill p{
+    font-size:2rem;
+    margin-top:2rem;
+}
+
+.bar{
+    width:100%;
+    height:15px;
+    background:#333;
+    border-radius:20px;
+    margin-top:10px;
+}
+
+.bar span{
+    display:block;
+    height:100%;
+    background:var(--main-color);
+    border-radius:20px;
+}
+
+/* Education & Experience */
+
+.edu-box{
+    background:var(--second-bg);
+    padding:4rem;
+    border-radius:15px;
+    text-align:center;
+    font-size:2rem;
+    line-height:2;
+}
+
+/* Contact */
+
+form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+form input,
+form textarea{
+    margin:15px 0;
+    padding:18px;
+    font-size:1.6rem;
+    background:#111;
+    color:white;
+    border-radius:10px;
+}
+
+textarea{
+    height:180px;
+    resize:none;
+}
+
+/* Responsive */
+
+@media(max-width:991px){
+
+html{
+    font-size:55%;
+}
+
+.home{
+    flex-direction:column;
+    text-align:center;
+}
+
+.home-img img{
+    width:70vw;
+}
+
+header{
+    padding:2rem 5%;
+}
+
+nav a{
+    margin-left:2rem;
+}
+
+}
